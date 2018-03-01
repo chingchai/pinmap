@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="kanit-bold">
+      PinMap
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="kanit-regular">
+  <div id="map" class="map"></div>
+
+  <form novalidate [formGroup]="reportForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary" stacked>ตำแหน่ง</ion-label>
+        <ion-input type="text" placeholder="lat: {{lat | number}} long: {{lon | number}}" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>สถานที่</ion-label>
+        <ion-input type="text" formControlName="fplace" placeholder="กรอกชื่อสถานที่"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>รายละเอียดอื่น ๆ</ion-label>
+        <ion-input type="text" formControlName="fdesc" placeholder="กรอกรายละเอียดเกี่ยวกับสถานที่"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>ผู้รายงาน</ion-label>
+        <ion-input type="text" formControlName="fname" placeholder="ผู้รายงาน"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-card>
+      <img [src]="imageName" *ngIf="imageName" />
+    </ion-card>
+
+    <ion-row>
+      <ion-col col-4>
+        <button ion-button icon-left color="light" (click)="showLocation()" block round>
+          <ion-icon name="locate"></ion-icon>
+          <b>ค้นตำแหน่ง</b>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button icon-left color="danger" [disabled]="!reportForm.valid" (click)="takePicture()" block round>
+          <ion-icon name="md-camera"></ion-icon>
+          <b>ถ่ายภาพ</b>
+        </button>
+      </ion-col>
+
+      <ion-col col-4>
+        <button ion-button icon-left color="primary" [disabled]="!reportForm.valid" (click)="sendData()" block round>
+          <ion-icon name="clipboard"></ion-icon>
+          <b>บันทึกข้อมูล</b>
+        </button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+</ion-content>

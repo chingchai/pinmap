@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Kanit-Regulat';
+    src: url(../assets/fonts/Kanit-Regular.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Bold';
+    src: url(../assets/fonts/Kanit-Bold.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Light';
+    src: url(../assets/fonts/Kanit-Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Kanit-Thin';
+    src: url(../assets/fonts/Kanit-Thin.ttf) format('truetype');
+  }
+  
+  .kanit-regular {
+    font-family: 'Kanit-Regulat' !important;
+  }
+
+  .kanit-bold {
+    font-family: 'Kanit-Bold' !important;
+  }
+
+  .kanit-light {
+    font-family: 'Kanit-Light' !important;
+  }
+  
+  #kanit-font {
+    font-family: 'Kanit-Regulat' !important;
+  }
+
+  #Kanit-Light {
+    font-family: 'Kanit-Light' !important;
+  }
+  
+  #isnre-content {
+    background-color: #CFD8DC;
+    font-family: 'Kanit-Light' !important;
+  }
